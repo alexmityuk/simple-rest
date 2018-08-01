@@ -2,23 +2,13 @@
 
 return [
     'index' => [
-        'namespace' => 'Index\IndexController',
-        'type' => 'get',
-        'action' => 'index',
-
         'controller' => 'Index\IndexController',
+        'action' => 'index',
         'requestType' => 'get',
-
     ],
     'products' => [
-        'namespace' => 'Product\ProductController',
-        'type' => 'get',
-        'action' => 'index',
-        'model' => 'Product\Model\ProductModel',
-        'hydrator' => 'Product\Hydrator\ProductHydrator',
-        'auth' => true,
-
         'controller' => 'Product\ProductController',
+        'action' => 'index',
         'requestType' => 'get',
         'options' => [
             'model' => 'Product\Model\ProductModel',
@@ -27,14 +17,8 @@ return [
         ],
     ],
     'products/{id}' => [
-        'namespace' => 'Product\ProductController',
-        'type' => 'get',
-        'action' => 'show',
-        'model' => 'Product\Model\ProductModel',
-        'hydrator' => 'Product\Hydrator\ProductHydrator',
-        'auth' => true,
-
         'controller' => 'Product\ProductController',
+        'action' => 'show',
         'requestType' => 'get',
         'options' => [
             'model' => 'Product\Model\ProductModel',
@@ -43,43 +27,28 @@ return [
         ],
     ],
     'routeNotFound' => [
-        'namespace' => 'Error\ErrorController',
-        'type' => 'get',
-        'action' => 'routeNotFound',
-
         'controller' => 'Error\ErrorController',
+        'action' => 'routeNotFound',
         'requestType' => 'get',
     ],
     'error' => [
-        'namespace' => 'Error\ErrorController',
-        'type' => 'get',
-        'action' => 'index',
-
         'controller' => 'Error\ErrorController',
+        'action' => 'index',
         'requestType' => 'get',
     ],
     'methodNotAllowed' => [
-        'namespace' => 'Error\ErrorController',
-        'type' => 'get',
-        'action' => 'methodNotAllowed',
-
         'controller' => 'Error\ErrorController',
+        'action' => 'methodNotAllowed',
         'requestType' => 'get',
     ],
     'login' => [
-        'namespace' => 'Auth\AuthController',
-        'type' => 'get',
-        'action' => 'login',
-
         'controller' => 'Auth\AuthController',
+        'action' => 'login',
         'requestType' => 'get',
     ],
     'logout' => [
-        'namespace' => 'Auth\AuthController',
-        'type' => 'get',
-        'action' => 'logout',
-
         'controller' => 'Auth\AuthController',
+        'action' => 'logout',
         'requestType' => 'get',
     ],
 ];
